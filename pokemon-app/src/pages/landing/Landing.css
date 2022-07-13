@@ -1,0 +1,43 @@
+
+.main{
+   min-height: 100vh;
+   position: relative;
+   background-color: #263238;
+   /* height: 100%; */
+   /* padding: 20px; */
+   color: #e8eaed;
+   /* font-family: 'Inter', sans-serif; */
+   font-family: 'Rubik', sans-serif;
+}
+.containerTexts{
+   height: auto;
+   padding: 20px;
+}
+
+h1 {
+   font-size: 25px;
+}
+h2 {
+   text-align: center;
+   font-size: 20px;
+}
+
+.secondParagraph{
+   margin-top: 30px;
+   text-align: center;
+}
+
+.containerButton {
+   margin-top: 20px;
+   text-align: center;
+}
+
+button {
+   justify-content: center;
+   font-family: 'Rubik', sans-serif;
+   font-size: 15px;
+   padding: 10px 20px;
+   border-radius: 5px;
+   border: #263238;
+   cursor: pointer;
+}
