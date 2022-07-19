@@ -9,7 +9,7 @@ import Footer from './../../components/Footer';
 import "./LoginForm.css"
 
 
-const LoginForm = ()=>{
+const LoginForm = ({onSucces})=>{
 
    //Hooks
    const [email, setEmail] = useState("")
@@ -27,10 +27,13 @@ const LoginForm = ()=>{
    }
    const handleClickIngreso = ()=>{
       if(email === "test@test.com" && pass === "Usuario@123"){
-         window.localStorage.setItem('isLogged', 'true')
+         window.localStorage.setItem('isLogged', true)
+         setError('')
          console.log('El botón funcionó')
+         onSucces()
       } else {
-         console.log("error")
+         setError("Datos Incorrectos")
+         window.localStorage.setItem('isLogged', false)
       }
    }
    return(
@@ -51,6 +54,9 @@ const LoginForm = ()=>{
                </div>
                <div className="containerButton">
                   <button onClick={handleClickIngreso} type="submit">Ingresar</button>
+               </div>
+               <div>
+                  {error.length > 0? (<div className="errorMessage">{error}</div>) : null}
                </div>
             </div>
          </div>
