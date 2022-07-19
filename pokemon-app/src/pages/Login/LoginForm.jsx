@@ -9,7 +9,7 @@ import Footer from './../../components/Footer';
 import "./LoginForm.css"
 
 
-const LoginForm = ({onSucces})=>{
+const LoginForm = ({onSucces})=>{//Acá recibimos la propiedad, en forma de objeto siempre!
 
    //Hooks
    const [email, setEmail] = useState("")
