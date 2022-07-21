@@ -1,6 +1,14 @@
+//Hooks
 import { useState } from "react"
-import LoginForm from "./LoginForm"
 import { useNavigate } from 'react-router-dom';
+//Components
+import LoginForm from "./LoginForm"
+import Header from './../../components/Header';
+import Footer from "../../components/Footer";
+//CSS
+import './Login.css'
+
+
 
 const Login = ()=> {
 
@@ -11,10 +19,14 @@ const Login = ()=> {
 
    const onSucces = ()=>{//esta función la pasamos como prop para que se vuelva a renderizar el componente
       setIsLogged(true)  //luego de cada ejecución de LoginForm a través de la modificación del estado.
-      navigate('list')
+      navigate('/list')
    }
    return(
-      <LoginForm onSucces={onSucces}/> 
+      <div className="main">
+         <Header/>
+         <LoginForm onSucces={onSucces}/> {/*Le declaramos una prop a este componente para que se vuelva a renderizar *1 */}
+         <Footer/>
+      </div>
    )
 }
 

@@ -13,12 +13,11 @@ const Landing = ()=>{
    const navigate = useNavigate()
    
    const handleClick = ()=>{
-      navigate("login")
+      navigate("/login")
    }
    return(
       <div className="main">
-         <Login/>
-         {/* <Header/>
+         <Header/>
          <div className="containerTexts">
             <h1>Creador: Alvarez, Nicolás Martín.</h1>
             <h2>Proyecto 2 - ReactJS Devlight Bootcamp.</h2>
@@ -31,7 +30,7 @@ const Landing = ()=>{
                <button onClick={handleClick}>Ingreso</button>
             </div>
          </div>
-         <Footer/> */}
+         <Footer/>
       </div>
       
    )

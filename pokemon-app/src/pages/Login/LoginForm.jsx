@@ -1,4 +1,4 @@
-//Dependendcias
+//Hooks
 import { useState } from "react";
 
 //componentes
@@ -9,8 +9,8 @@ import Footer from './../../components/Footer';
 import "./LoginForm.css"
 
 
-const LoginForm = ({onSucces})=>{//Acá recibimos la propiedad, en forma de objeto siempre!
-
+const LoginForm = ({onSucces})=>{//*1: esta es la prop que le declaramos en "Login" y va entre {} porque las props
+                                 //se pasan como objetos.
    //Hooks
    const [email, setEmail] = useState("")
    const [pass, setPass] = useState("")
@@ -38,7 +38,6 @@ const LoginForm = ({onSucces})=>{//Acá recibimos la propiedad, en forma de obje
    }
    return(
       <div>
-         <Header/>
          <div className="containerForm">
             <h3>Ingrese utilizando las siguientes credenciales:</h3>
             <div className="frame">
@@ -60,7 +59,6 @@ const LoginForm = ({onSucces})=>{//Acá recibimos la propiedad, en forma de obje
                </div>
             </div>
          </div>
-         <Footer/>         
       </div>
    )
 }
