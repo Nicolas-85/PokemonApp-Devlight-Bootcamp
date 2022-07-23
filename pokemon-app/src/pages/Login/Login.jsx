@@ -19,7 +19,7 @@ const Login = ()=> {
 
    const onSucces = ()=>{//esta función la pasamos como prop para que se vuelva a renderizar el componente
       setIsLogged(true)  //luego de cada ejecución de LoginForm a través de la modificación del estado.
-      navigate('/list')
+      navigate('/list') //Al ponerle / adelante, la declaro como absoluta. Sino, sería reltiva.
    }
    return(
       <div className="main">

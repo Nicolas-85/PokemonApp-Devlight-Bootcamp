@@ -5,11 +5,12 @@ import './App.css';
 //Components
 import Landing from "./pages/landing/Landing";
 import Login from './pages/Login/Login';
-import List from './pages/List';
 import NotFound from './pages/NotFound/NotFound';
+import List from './pages/List/List';
+// import { Route } from 'react-router-dom';
 
 function App() {
-  const isLogged = window.localStorage.getItem('isLogged') === true //al igualar o comparar si 'isLogged' es true, 
+  const isLogged = window.localStorage.getItem('isLogged') === "true" //al igualar o comparar si 'isLogged' es true, 
                                                                     //convertimos la constante en un boolean
   return (
     <BrowserRouter>
